@@ -1,5 +1,5 @@
 :root{--washi:#f3ece0;--paper:#faf6ee;--sumi:#1f1b16;--ink:#3a332b;--muted:#6b6157;--shu:#b5462e;--hinoki:#c9a26b;--kuri:#7a5230;--line:#d9cdb8;--ok:#4c6b3c;--prog:#b5462e;--plan:#6e6458;
---serif:"Noto Serif JP","Hiragino Mincho ProN",Georgia,serif;--sans:Inter,system-ui,sans-serif;--r:14px}
+--serif:"Hiragino Mincho ProN","Yu Mincho","Noto Serif JP","Noto Serif CJK JP",Georgia,"Times New Roman",serif;--sans:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;--r:14px}
 *{box-sizing:border-box}html{scroll-behavior:smooth}
 body{margin:0;color:var(--ink);font:16px/1.65 var(--sans);background-color:var(--washi);
 background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .45 0 0 0 0 .38 0 0 0 0 .28 0 0 0 .07 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
