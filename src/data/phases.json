@@ -4,7 +4,6 @@
   "kanji": "学",
   "name": "Study & Space",
   "summary": "Learn the vocabulary, read the core books, prepare a corner of the shop and a low planing beam before buying anything.",
-  "estHours": 20,
   "budget": 60,
   "budgetNote": "Books (estimate; used copies vary).",
   "milestones": [
@@ -35,7 +34,6 @@
   "kanji": "研",
   "name": "Starter Kit & Sharpening",
   "summary": "Buy the minimum kit, flatten the stones, and learn to sharpen chisels and set up a kanna. Nothing else matters until the edges are sharp.",
-  "estHours": 40,
   "budget": 465,
   "budgetNote": "Starter kit (~$374) + Atoma #400 diamond plate for flattening stones and backs ($91).",
   "milestones": [
@@ -71,7 +69,6 @@
   "kanji": "継",
   "name": "First Joints",
   "summary": "Layout with sashigane and marking knife, then the basic family of joints in softwood until they fit off the saw.",
-  "estHours": 60,
   "budget": 258,
   "budgetNote": "Practice lumber (estimate ~$80) + Fujihiro mortise chisel ($122.90) + Tajima sumitsubo ($54.98).",
   "milestones": [
@@ -107,7 +104,6 @@
   "kanji": "作",
   "name": "First Projects",
   "summary": "Turn practice into things I'll use every day: a stone stand, a Japanese tool box, and a small stool.",
-  "estHours": 80,
   "budget": 150,
   "budgetNote": "Lumber and hardware (estimate).",
   "milestones": [
@@ -138,7 +134,6 @@
   "kanji": "組",
   "name": "Splices & Connections",
   "summary": "The classic timber splices and connections that make Japanese carpentry what it is.",
-  "estHours": 80,
   "budget": 200,
   "budgetNote": "Timber (estimate ~$100) + two more Taikei chisels (~$100).",
   "milestones": [
@@ -169,7 +164,6 @@
   "kanji": "組子",
   "name": "Kumiko",
   "summary": "Precision small-stock work: lattice panels built from thin strips with no glue or nails.",
-  "estHours": 60,
   "budget": 140,
   "budgetNote": "Kumiko jig and stock (estimate).",
   "milestones": [
@@ -195,7 +189,6 @@
   "kanji": "匠",
   "name": "Advanced Joinery",
   "summary": "The showpieces: the rabbeted oblique scarf and the three-way corner joint.",
-  "estHours": 100,
   "budget": 200,
   "budgetNote": "Larger section timber (estimate).",
   "milestones": [

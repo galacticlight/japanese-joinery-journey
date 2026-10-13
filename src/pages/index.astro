@@ -2,9 +2,8 @@
 import Base from '../layouts/Base.astro';
 import Ring from '../components/Ring.astro';
 import site from '../data/site.json';
-import phases from '../data/phases.json';
 import { getCollection } from 'astro:content';
-import { stats, phaseStatus, url, usd } from '../lib';
+import { phases, stats, phaseStatus, url, usd } from '../lib';
 const s = stats();
 const entries = (await getCollection('journal')).sort((a, b) => +b.data.date - +a.data.date);
 const hours = entries.reduce((a, e) => a + e.data.hours, 0);

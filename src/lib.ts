@@ -1,6 +1,8 @@
-import phases from './data/phases.json';
+import rawPhases from './data/phases.json';
 import expenses from './data/expenses.json';
 import tools from './data/tools.json';
+/** Phases with estHours derived from the sum of their milestone hours (single source of truth). */
+export const phases = rawPhases.map((p) => ({ ...p, estHours: p.milestones.reduce((a, m) => a + m.hours, 0) }));
 export type Status = 'planned' | 'in-progress' | 'done';
 export const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 export const url = (p: string) => `${base}${p}`;

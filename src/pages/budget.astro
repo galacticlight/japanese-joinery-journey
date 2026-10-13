@@ -1,8 +1,7 @@
 ---
 import Base from '../layouts/Base.astro';
 import Bars from '../components/Bars.astro';
-import phases from '../data/phases.json';
-import { allExpenses, spentBy, stats, usd } from '../lib';
+import { phases, allExpenses, spentBy, stats, usd } from '../lib';
 const s = stats();
 const rows = phases.map((p, i) => ({ label: `P${i}`, name: p.name, planned: p.budget, spent: spentBy(p.id) }));
 ---

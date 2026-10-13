@@ -12,7 +12,7 @@ All content lives in `src/data/` and `src/content/journal/`. Edit, commit, push 
 
 | What | File | How |
 |---|---|---|
-| Milestone status | `src/data/phases.json` | Set a milestone's `"status"` to `"planned"`, `"in-progress"` or `"done"`. Progress meters update automatically. |
+| Milestone status / hours | `src/data/phases.json` | Set a milestone's `"status"` to `"planned"`, `"in-progress"` or `"done"`. Phase hours are the sum of milestone `hours` (calculated, not stored). `npm run build` warns if tool costs or spending exceed a phase budget. |
 | A purchase | `src/data/expenses.json` | Append `{"date":"2026-10-20","item":"Gyokucho ryoba","amount":37.90,"phase":"p1"}` |
 | A tool you now own | `src/data/tools.json` | Change `"status": "wanted"` → `"owned"` (and log the expense above). |
 | Journal / time capture | `src/content/journal/YYYY-MM-DD-slug.md` | Copy the Day 0 file. Front-matter: `title`, `date`, `hours`, `phase`, `photos: [{src: "/photos/2026-10-20-plane.jpg", alt: "First shaving"}]`. Put images in `public/photos/`. |
