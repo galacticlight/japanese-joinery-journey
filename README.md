@@ -21,7 +21,7 @@ All content lives in `src/data/` and `src/content/journal/`. Edit, commit, push 
 ## Develop
 
 ```bash
-npm install
+npm install      # Node 22.12+
 npm run dev      # http://localhost:4321/japanese-joinery-journey/
 npm run build    # outputs dist/
 ```

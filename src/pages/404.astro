@@ -1,0 +1,12 @@
+---
+import Base from '../layouts/Base.astro';
+import { url } from '../lib';
+---
+<Base title="Not found" description="This page doesn't exist.">
+  <section style="text-align:center;min-height:50vh;display:grid;place-content:center">
+    <p class="eyebrow">迷子 · 404</p>
+    <h1>This joint doesn't fit.</h1>
+    <p class="lead" style="margin:auto">The page you're looking for isn't here, or hasn't been cut yet.</p>
+    <p><a href={url('/')}>← Back to the journey</a> · <a href={url('/roadmap/')}>Roadmap</a></p>
+  </section>
+</Base>

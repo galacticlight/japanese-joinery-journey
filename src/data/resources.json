@@ -1,8 +1,50 @@
 [
- {"type":"Book","title":"Japanese Woodworking Tools: Their Tradition, Spirit, and Use — Toshio Odate","url":"https://www.simonandschuster.com/books/Japanese-Woodworking-Tools/Toshio-Odate/9780941936460","note":"The standard introduction to the tools and how they're used."},
- {"type":"Book","title":"The Complete Japanese Joinery — Yasuo Nakahara & Hideo Sato","url":"https://archive.org/details/completejapanese0000unse","note":"Reference for the joints in phases 4–6 (borrowable on Internet Archive)."},
- {"type":"Reading list","title":"Daiku Dojo — books on Japanese woodworking","url":"http://daikudojo.org/Archive/gallery_books/","note":"Curated list from a Japanese carpentry community group."},
- {"type":"School","title":"Somakosha School (Okayama, Japan)","url":"https://www.somakoshaschool.com/japanese-carpentry-tools-sharpening-joinery","note":"Two-week foundation course: tool setup, sharpening, layout, joinery."},
- {"type":"Store","title":"Hida Tool (Berkeley, CA)","url":"https://hidatool.com/","note":"US Japanese tool shop; also offers a sharpening service."},
- {"type":"Store","title":"Kurashige Tools (Japan)","url":"https://shop.kurashige-tools.com/","note":"Ships Japanese tools internationally; prices in JPY."}
+ {
+  "type": "Book",
+  "title": "Japanese Woodworking Tools: Their Tradition, Spirit, and Use — Toshio Odate",
+  "url": "https://openlibrary.org/books/OL350522M",
+  "note": "The standard introduction to the tools and how they're used."
+ },
+ {
+  "type": "Book",
+  "title": "The Complete Japanese Joinery — Yasuo Nakahara & Hideo Sato",
+  "url": "https://archive.org/details/completejapanese0000unse",
+  "note": "Reference for the joints in phases 4–6 (borrowable on Internet Archive)."
+ },
+ {
+  "type": "Video",
+  "title": "The Art of Setting Up a Japanese Hand Plane (鉋 Kanna) — Cow Dog Craft Works",
+  "url": "https://www.youtube.com/watch?v=nCxtDBPjIoI",
+  "note": "59-minute start-to-finish kanna setup; exactly what Phase 1 needs."
+ },
+ {
+  "type": "YouTube",
+  "title": "ISHITANI FURNITURE",
+  "url": "https://www.youtube.com/@ISHITANIFURNITURE",
+  "note": "A Japanese furniture maker building pieces with hand tools and traditional joinery."
+ },
+ {
+  "type": "Classes",
+  "title": "Hida Tool School (Berkeley, CA)",
+  "url": "https://hidatool.com/class/",
+  "note": "Beginner classes on sharpening, setting up a nomi and a 48mm kanna."
+ },
+ {
+  "type": "School",
+  "title": "Somakosha School (Okayama, Japan)",
+  "url": "https://www.somakoshaschool.com/japanese-carpentry-tools-sharpening-joinery",
+  "note": "Two-week foundation course: tool setup, sharpening, layout, joinery."
+ },
+ {
+  "type": "Store",
+  "title": "Hida Tool (Berkeley, CA)",
+  "url": "https://hidatool.com/",
+  "note": "US Japanese tool shop; also offers a sharpening service."
+ },
+ {
+  "type": "Store",
+  "title": "Kurashige Tools (Japan)",
+  "url": "https://shop.kurashige-tools.com/",
+  "note": "Ships Japanese tools internationally; prices in JPY."
+ }
 ]

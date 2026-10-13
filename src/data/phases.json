@@ -1,44 +1,219 @@
 [
-  {"id":"p0","kanji":"学","name":"Study & Space","summary":"Learn the vocabulary, read the core books, prepare a corner of the shop and a low planing beam before buying anything.","estHours":20,"budget":60,"budgetNote":"Books (estimate; used copies vary).",
-   "milestones":[
-    {"title":"Read Odate's Japanese Woodworking Tools (tool chapters)","status":"planned","hours":8},
-    {"title":"Watch a full kanna setup and a full chisel-sharpening video end to end","status":"planned","hours":4},
-    {"title":"Set up work area + low planing beam on the existing workbench","status":"planned","hours":6},
-    {"title":"Launch this public roadmap","status":"done","hours":2}]},
-  {"id":"p1","kanji":"研","name":"Starter Kit & Sharpening","summary":"Buy the minimum kit, flatten the stones, and learn to sharpen chisels and set up a kanna. Nothing else matters until the edges are sharp.","estHours":40,"budget":479,"budgetNote":"Starter kit (~$374) + Atoma #400 diamond plate for flattening stones and backs (~$105).",
-   "milestones":[
-    {"title":"Order the starter kit","status":"planned","hours":1},
-    {"title":"Flatten the chisel backs (ura-oshi) on 3 nomi","status":"planned","hours":8},
-    {"title":"Repeatable 1000→6000 edge on chisels, free-hand","status":"planned","hours":10},
-    {"title":"Kanna setup: fit the blade, tune the dai, take a full-length shaving","status":"planned","hours":15},
-    {"title":"Saw drills: 20 square crosscuts and 20 rip cuts to a line","status":"planned","hours":6}]},
-  {"id":"p2","kanji":"継","name":"First Joints","summary":"Layout with sashigane and marking knife, then the basic family of joints in softwood until they fit off the saw.","estHours":60,"budget":215,"budgetNote":"Practice lumber (estimate ~$80) + Fujihiro mortise chisel (from $122.90) + sumitsubo.",
-   "milestones":[
-    {"title":"Half-lap (ai-gaki) — 5 in a row that close with hand pressure","status":"planned","hours":10},
-    {"title":"Bridle joint / open mortise","status":"planned","hours":8},
-    {"title":"Through mortise and tenon (hozo-sashi)","status":"planned","hours":16},
-    {"title":"Wedged through tenon (wari-kusabi)","status":"planned","hours":12},
-    {"title":"Dovetail housing / ari-kake","status":"planned","hours":14}]},
-  {"id":"p3","kanji":"作","name":"First Projects","summary":"Turn practice into things I'll use every day: a stone stand, a Japanese tool box, and a small stool.","estHours":80,"budget":150,"budgetNote":"Lumber and hardware (estimate).",
-   "milestones":[
-    {"title":"Sharpening stone stand / pond (togi-dai)","status":"planned","hours":10},
-    {"title":"Dogu-bako tool box with sliding lid","status":"planned","hours":25},
-    {"title":"Small stool with through tenons and wedges","status":"planned","hours":30},
-    {"title":"Planing beam & bench hook upgrade","status":"planned","hours":15}]},
-  {"id":"p4","kanji":"組","name":"Splices & Connections","summary":"The classic timber splices and connections that make Japanese carpentry what it is.","estHours":80,"budget":200,"budgetNote":"Timber (estimate ~$100) + two more Taikei chisels (~$100).",
-   "milestones":[
-    {"title":"Koshikake ari-tsugi (lapped dovetail splice)","status":"planned","hours":18},
-    {"title":"Koshikake kama-tsugi (lapped gooseneck splice)","status":"planned","hours":22},
-    {"title":"Okkake daisen-tsugi (scarf with pegs)","status":"planned","hours":24},
-    {"title":"Watari-ago (cogged cross joint)","status":"planned","hours":16}]},
-  {"id":"p5","kanji":"組子","name":"Kumiko","summary":"Precision small-stock work: lattice panels built from thin strips with no glue or nails.","estHours":60,"budget":140,"budgetNote":"Kumiko jig and stock (estimate).",
-   "milestones":[
-    {"title":"Build a kumiko cutting jig","status":"planned","hours":10},
-    {"title":"Square grid (kaku-kumiko) coaster","status":"planned","hours":15},
-    {"title":"Asanoha (hemp-leaf) pattern panel","status":"planned","hours":35}]},
-  {"id":"p6","kanji":"匠","name":"Advanced Joinery","summary":"The showpieces: the rabbeted oblique scarf and the three-way corner joint.","estHours":100,"budget":200,"budgetNote":"Larger section timber (estimate).",
-   "milestones":[
-    {"title":"Kanawa-tsugi (rabbeted oblique scarf with key)","status":"planned","hours":35},
-    {"title":"Sampo-zashi (three-way corner joint)","status":"planned","hours":40},
-    {"title":"Capstone: small display piece combining 3 joints","status":"planned","hours":25}]}
+ {
+  "id": "p0",
+  "kanji": "学",
+  "name": "Study & Space",
+  "summary": "Learn the vocabulary, read the core books, prepare a corner of the shop and a low planing beam before buying anything.",
+  "estHours": 20,
+  "budget": 60,
+  "budgetNote": "Books (estimate; used copies vary).",
+  "milestones": [
+   {
+    "title": "Read Odate's Japanese Woodworking Tools (tool chapters)",
+    "status": "planned",
+    "hours": 8
+   },
+   {
+    "title": "Watch a full kanna setup and a full chisel-sharpening video end to end",
+    "status": "planned",
+    "hours": 4
+   },
+   {
+    "title": "Set up work area + low planing beam on the existing workbench",
+    "status": "planned",
+    "hours": 6
+   },
+   {
+    "title": "Launch this public roadmap",
+    "status": "done",
+    "hours": 2
+   }
+  ]
+ },
+ {
+  "id": "p1",
+  "kanji": "研",
+  "name": "Starter Kit & Sharpening",
+  "summary": "Buy the minimum kit, flatten the stones, and learn to sharpen chisels and set up a kanna. Nothing else matters until the edges are sharp.",
+  "estHours": 40,
+  "budget": 465,
+  "budgetNote": "Starter kit (~$374) + Atoma #400 diamond plate for flattening stones and backs ($91).",
+  "milestones": [
+   {
+    "title": "Order the starter kit",
+    "status": "planned",
+    "hours": 1
+   },
+   {
+    "title": "Flatten the chisel backs (ura-oshi) on 3 nomi",
+    "status": "planned",
+    "hours": 8
+   },
+   {
+    "title": "Repeatable 1000→6000 edge on chisels, free-hand",
+    "status": "planned",
+    "hours": 10
+   },
+   {
+    "title": "Kanna setup: fit the blade, tune the dai, take a full-length shaving",
+    "status": "planned",
+    "hours": 15
+   },
+   {
+    "title": "Saw drills: 20 square crosscuts and 20 rip cuts to a line",
+    "status": "planned",
+    "hours": 6
+   }
+  ]
+ },
+ {
+  "id": "p2",
+  "kanji": "継",
+  "name": "First Joints",
+  "summary": "Layout with sashigane and marking knife, then the basic family of joints in softwood until they fit off the saw.",
+  "estHours": 60,
+  "budget": 258,
+  "budgetNote": "Practice lumber (estimate ~$80) + Fujihiro mortise chisel ($122.90) + Tajima sumitsubo ($54.98).",
+  "milestones": [
+   {
+    "title": "Half-lap (ai-gaki) — 5 in a row that close with hand pressure",
+    "status": "planned",
+    "hours": 10
+   },
+   {
+    "title": "Bridle joint / open mortise",
+    "status": "planned",
+    "hours": 8
+   },
+   {
+    "title": "Through mortise and tenon (hozo-sashi)",
+    "status": "planned",
+    "hours": 16
+   },
+   {
+    "title": "Wedged through tenon (wari-kusabi)",
+    "status": "planned",
+    "hours": 12
+   },
+   {
+    "title": "Dovetail housing / ari-kake",
+    "status": "planned",
+    "hours": 14
+   }
+  ]
+ },
+ {
+  "id": "p3",
+  "kanji": "作",
+  "name": "First Projects",
+  "summary": "Turn practice into things I'll use every day: a stone stand, a Japanese tool box, and a small stool.",
+  "estHours": 80,
+  "budget": 150,
+  "budgetNote": "Lumber and hardware (estimate).",
+  "milestones": [
+   {
+    "title": "Sharpening stone stand / pond (togi-dai)",
+    "status": "planned",
+    "hours": 10
+   },
+   {
+    "title": "Dogu-bako tool box with sliding lid",
+    "status": "planned",
+    "hours": 25
+   },
+   {
+    "title": "Small stool with through tenons and wedges",
+    "status": "planned",
+    "hours": 30
+   },
+   {
+    "title": "Planing beam & bench hook upgrade",
+    "status": "planned",
+    "hours": 15
+   }
+  ]
+ },
+ {
+  "id": "p4",
+  "kanji": "組",
+  "name": "Splices & Connections",
+  "summary": "The classic timber splices and connections that make Japanese carpentry what it is.",
+  "estHours": 80,
+  "budget": 200,
+  "budgetNote": "Timber (estimate ~$100) + two more Taikei chisels (~$100).",
+  "milestones": [
+   {
+    "title": "Koshikake ari-tsugi (lapped dovetail splice)",
+    "status": "planned",
+    "hours": 18
+   },
+   {
+    "title": "Koshikake kama-tsugi (lapped gooseneck splice)",
+    "status": "planned",
+    "hours": 22
+   },
+   {
+    "title": "Okkake daisen-tsugi (scarf with pegs)",
+    "status": "planned",
+    "hours": 24
+   },
+   {
+    "title": "Watari-ago (cogged cross joint)",
+    "status": "planned",
+    "hours": 16
+   }
+  ]
+ },
+ {
+  "id": "p5",
+  "kanji": "組子",
+  "name": "Kumiko",
+  "summary": "Precision small-stock work: lattice panels built from thin strips with no glue or nails.",
+  "estHours": 60,
+  "budget": 140,
+  "budgetNote": "Kumiko jig and stock (estimate).",
+  "milestones": [
+   {
+    "title": "Build a kumiko cutting jig",
+    "status": "planned",
+    "hours": 10
+   },
+   {
+    "title": "Square grid (kaku-kumiko) coaster",
+    "status": "planned",
+    "hours": 15
+   },
+   {
+    "title": "Asanoha (hemp-leaf) pattern panel",
+    "status": "planned",
+    "hours": 35
+   }
+  ]
+ },
+ {
+  "id": "p6",
+  "kanji": "匠",
+  "name": "Advanced Joinery",
+  "summary": "The showpieces: the rabbeted oblique scarf and the three-way corner joint.",
+  "estHours": 100,
+  "budget": 200,
+  "budgetNote": "Larger section timber (estimate).",
+  "milestones": [
+   {
+    "title": "Kanawa-tsugi (rabbeted oblique scarf with key)",
+    "status": "planned",
+    "hours": 35
+   },
+   {
+    "title": "Sampo-zashi (three-way corner joint)",
+    "status": "planned",
+    "hours": 40
+   },
+   {
+    "title": "Capstone: small display piece combining 3 joints",
+    "status": "planned",
+    "hours": 25
+   }
+  ]
+ }
 ]
