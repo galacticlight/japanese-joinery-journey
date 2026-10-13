@@ -1,0 +1,46 @@
+---
+import Base from '../layouts/Base.astro';
+import Ring from '../components/Ring.astro';
+import site from '../data/site.json';
+import phases from '../data/phases.json';
+import { getCollection } from 'astro:content';
+import { stats, phaseStatus, url, usd } from '../lib';
+const s = stats();
+const entries = (await getCollection('journal')).sort((a, b) => +b.data.date - +a.data.date);
+const hours = entries.reduce((a, e) => a + e.data.hours, 0);
+const current = phases.find((p) => phaseStatus(p) !== 'done') ?? phases.at(-1)!;
+const latest = entries[0];
+---
+<Base>
+  <div class="hero-kanji" aria-hidden="true">木組み</div>
+  <section class="hero">
+    <div>
+      <p class="eyebrow">Public roadmap · 日本の木組み</p>
+      <h1>Learning Japanese joinery, <em>from zero</em>, in public.</h1>
+      <p class="lead">{site.intro}</p>
+      <p><a href={url('/roadmap/')} class="badge s-in-progress" style="font-size:.95rem;padding:.5rem 1rem">See the roadmap →</a></p>
+    </div>
+    <div class="card"><Ring pct={s.pct} label="Journey complete" /><p class="muted" style="text-align:center;margin:.5rem 0 0">{s.doneCount} of {s.msCount} milestones done</p></div>
+  </section>
+  <section class="grid reveal">
+    <div class="card stat"><div class="n">{hours}h</div><div class="l">logged of ~{s.estHours}h estimated</div></div>
+    <div class="card stat"><div class="n">{usd(s.spent)}</div><div class="l">spent of {usd(s.planned)} planned</div></div>
+    <div class="card stat"><div class="n">{usd(Math.round(s.starter))}</div><div class="l">starter tool kit</div></div>
+    <div class="card stat"><div class="n">{phases.length}</div><div class="l">phases, {current.name} next</div></div>
+  </section>
+  <section class="reveal">
+    <h2>The path</h2>
+    <div class="grid">
+      {phases.map((p, i) => <a href={url(`/roadmap/#${p.id}`)} class="card" style="text-decoration:none;color:inherit">
+        <span class="pk">{p.kanji}</span><span class="muted">Phase {i}</span>
+        <h3 style="margin:.4rem 0">{p.name}</h3>
+        <span class={`badge s-${phaseStatus(p)}`}>{phaseStatus(p).replace('-', ' ')}</span>
+        <p class="muted" style="font-size:.9rem">{p.estHours}h · {usd(p.budget)}</p>
+      </a>)}
+    </div>
+  </section>
+  {latest && <section class="reveal">
+    <h2>Latest from the journal</h2>
+    <article class="card"><p class="eyebrow">{latest.data.date.toISOString().slice(0, 10)} · {latest.data.hours}h</p><h3>{latest.data.title}</h3><a href={url('/journal/')}>Read the journal →</a></article>
+  </section>}
+</Base>

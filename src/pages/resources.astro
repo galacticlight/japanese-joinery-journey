@@ -1,0 +1,8 @@
+---
+import Base from '../layouts/Base.astro';
+import resources from '../data/resources.json';
+---
+<Base title="Resources" description="Books, schools and shops for learning Japanese joinery.">
+  <p class="eyebrow">書 · Resources</p><h1>Where I'm learning from.</h1>
+  <section class="grid">{resources.map((r) => <article class="card reveal"><p class="eyebrow">{r.type}</p><h3><a href={r.url} rel="noopener" target="_blank">{r.title} ↗</a></h3><p class="muted">{r.note}</p></article>)}</section>
+</Base>

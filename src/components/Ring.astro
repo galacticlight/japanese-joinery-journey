@@ -1,0 +1,13 @@
+---
+const { pct, label } = Astro.props as { pct: number; label: string };
+const r = 90, c = 2 * Math.PI * r;
+---
+<svg class="ring" viewBox="0 0 220 220" role="img" aria-label={`${label}: ${pct}%`}>
+  <circle class="track" cx="110" cy="110" r={r} />
+  <circle class="bar" cx="110" cy="110" r={r} stroke-dasharray={c} stroke-dashoffset={c} data-target={c * (1 - pct / 100)} transform="rotate(-90 110 110)" />
+  <text x="110" y="108" text-anchor="middle" style="font:600 46px var(--serif);fill:var(--sumi)">{pct}%</text>
+  <text x="110" y="138" text-anchor="middle" style="font:500 13px var(--sans);fill:var(--muted);letter-spacing:.1em">{label.toUpperCase()}</text>
+</svg>
+<script>
+  document.querySelectorAll<SVGCircleElement>('.ring .bar').forEach((b) => requestAnimationFrame(() => setTimeout(() => b.style.strokeDashoffset = b.dataset.target!, 150)));
+</script>

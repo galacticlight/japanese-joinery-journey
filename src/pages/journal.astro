@@ -1,0 +1,18 @@
+---
+import Base from '../layouts/Base.astro';
+import Line from '../components/Line.astro';
+import { getCollection, render } from 'astro:content';
+import { url } from '../lib';
+const asc = (await getCollection('journal')).sort((a, b) => +a.data.date - +b.data.date);
+let t = 0; const points = asc.map((e) => ({ date: e.data.date.toISOString().slice(0, 10), total: (t += e.data.hours) }));
+const entries = await Promise.all([...asc].reverse().map(async (e) => ({ e, Content: (await render(e)).Content })));
+---
+<Base title="Journal" description="Time captures: hours, photos and notes from the bench.">
+  <p class="eyebrow">記 · Time captures</p><h1>The journal.</h1>
+  <section class="card reveal"><h2>Cumulative hours</h2><Line points={points} /></section>
+  {entries.map(({ e, Content }) => <article class="card entry reveal" style="margin-bottom:1.2rem">
+    <div><time datetime={e.data.date.toISOString()}>{e.data.date.toISOString().slice(0, 10)}</time><p class="badge s-in-progress">{e.data.hours}h</p></div>
+    <div><h2 style="margin-top:0">{e.data.title}</h2><Content />
+      {e.data.photos.length > 0 && <div class="photos">{e.data.photos.map((p) => <img src={url(p.src)} alt={p.alt} loading="lazy" />)}</div>}</div>
+  </article>)}
+</Base>

@@ -1,0 +1,33 @@
+---
+import Base from '../layouts/Base.astro';
+import phases from '../data/phases.json';
+import { phaseStatus, usd } from '../lib';
+---
+<Base title="Roadmap" description="Phased milestones from first tools to kanawa tsugi.">
+  <p class="eyebrow">道 · The roadmap</p><h1>Seven phases, honest estimates.</h1>
+  <p class="lead">Each phase opens when the previous one's skills are solid. Hours and budgets are plans, not promises — they'll be updated as reality arrives.</p>
+  <div class="filters" role="group" aria-label="Filter milestones by status">
+    {['all', 'planned', 'in-progress', 'done'].map((f) => <button type="button" data-f={f} aria-pressed={f === 'all' ? 'true' : 'false'}>{f.replace('-', ' ')}</button>)}
+  </div>
+  <div class="timeline">
+    {phases.map((p, i) => { const st = phaseStatus(p); const done = p.milestones.filter((m) => m.status === 'done').length;
+      return <div class={`phase reveal st-${st}`} id={p.id}>
+        <span class="dot" aria-hidden="true">{i}</span>
+        <details class="card" open={i < 2}>
+          <summary><span><span class="pk">{p.kanji}</span><strong style="font-family:var(--serif);font-size:1.3rem">Phase {i} · {p.name}</strong></span>
+            <span class={`badge s-${st}`}>{st.replace('-', ' ')}</span></summary>
+          <p>{p.summary}</p>
+          <p class="muted" style="font-size:.9rem">~{p.estHours} hours · budget {usd(p.budget)} — {p.budgetNote}</p>
+          <div class="wood" role="progressbar" aria-label={`${p.name} milestones done`} aria-valuenow={done} aria-valuemin="0" aria-valuemax={p.milestones.length}><span style={`width:${(done / p.milestones.length) * 100}%`}></span></div>
+          <ul class="ms">{p.milestones.map((m) => <li data-s={m.status}><span>{m.title}</span><span style="display:flex;gap:.6rem;align-items:center"><span class="muted">{m.hours}h</span><span class={`badge s-${m.status}`}>{m.status.replace('-', ' ')}</span></span></li>)}</ul>
+        </details>
+      </div>; })}
+  </div>
+  <script>
+    const btns = document.querySelectorAll<HTMLButtonElement>('.filters button');
+    btns.forEach((b) => b.addEventListener('click', () => {
+      btns.forEach((x) => x.setAttribute('aria-pressed', String(x === b)));
+      document.querySelectorAll<HTMLElement>('.ms li').forEach((li) => li.hidden = b.dataset.f !== 'all' && li.dataset.s !== b.dataset.f);
+    }));
+  </script>
+</Base>

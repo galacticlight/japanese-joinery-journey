@@ -1,0 +1,43 @@
+---
+import '../styles/global.css';
+import site from '../data/site.json';
+import { url } from '../lib';
+interface Props { title?: string; description?: string }
+const { title, description = site.tagline } = Astro.props;
+const nav = [['/', 'Home', '家'], ['/roadmap/', 'Roadmap', '道'], ['/journal/', 'Journal', '記'], ['/budget/', 'Budget', '金'], ['/tools/', 'Tools', '具'], ['/joints/', 'Joints', '継'], ['/resources/', 'Resources', '書']];
+const path = Astro.url.pathname;
+---
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{title ? `${title} · ` : ''}{site.title}</title>
+  <meta name="description" content={description} />
+  <meta property="og:title" content={title ?? site.title} /><meta property="og:description" content={description} />
+  <meta name="theme-color" content="#f3ece0" />
+  <link rel="icon" href={url('/favicon.svg')} type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600&family=Inter:wght@400;500;600&display=swap" />
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="site-header">
+    <a class="brand" href={url('/')}><span class="hanko" aria-hidden="true">木</span><span>Joinery Journey</span></a>
+    <nav aria-label="Main"><ul>
+      {nav.map(([href, label, k]) => {
+        const full = url(href); const cur = path === full || path === full.replace(/\/$/, '');
+        return <li><a href={full} aria-current={cur ? 'page' : undefined}><span class="nk" aria-hidden="true">{k}</span>{label}</a></li>;
+      })}
+    </ul></nav>
+  </header>
+  <main id="main"><slot /></main>
+  <footer class="site-footer">
+    <p>{site.owner}'s public notebook · started {site.startDate} · <a href="https://github.com/galacticlight/japanese-joinery-journey">source &amp; data on GitHub</a></p>
+    <p class="muted">{site.fxNote}</p>
+  </footer>
+  <script>
+    const io = new IntersectionObserver((es) => es.forEach((e) => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), { threshold: 0.12 });
+    document.querySelectorAll('.reveal').forEach((el) => io.observe(el));
+  </script>
+</body>
+</html>

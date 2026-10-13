@@ -1,0 +1,15 @@
+---
+const { points } = Astro.props as { points: { date: string; total: number }[] };
+const W = 720, H = 240, pad = 40;
+const pts = points.length === 1 ? [{ date: points[0].date, total: 0 }, ...points] : points;
+const max = Math.max(1, ...pts.map((p) => p.total));
+const xy = pts.map((p, i) => [pad + (i / Math.max(1, pts.length - 1)) * (W - pad * 2), H - pad - (p.total / max) * (H - pad * 2)]);
+const d = xy.map(([x, y], i) => `${i ? 'L' : 'M'}${x},${y}`).join(' ');
+---
+<svg class="chart" viewBox={`0 0 ${W} ${H}`} role="img" aria-label={`Cumulative hours: ${pts.at(-1)?.total ?? 0}`}>
+  <line x1={pad} x2={W - pad} y1={H - pad} y2={H - pad} stroke="#d9cdb8" />
+  <path d={`${d} L${xy.at(-1)![0]},${H - pad} L${xy[0][0]},${H - pad} Z`} fill="rgba(201,162,107,.25)" />
+  <path d={d} fill="none" stroke="#b5462e" stroke-width="3" stroke-linejoin="round" />
+  {xy.map(([x, y], i) => <g><circle cx={x} cy={y} r="5" fill="#faf6ee" stroke="#b5462e" stroke-width="2.5" /><text x={x} y={y - 12} text-anchor="middle">{pts[i].total}h</text></g>)}
+  <text x={pad} y={H - pad + 20}>{pts[0].date}</text><text x={W - pad} y={H - pad + 20} text-anchor="end">{pts.at(-1)!.date}</text>
+</svg>

@@ -1,0 +1,25 @@
+---
+import Base from '../layouts/Base.astro';
+import Bars from '../components/Bars.astro';
+import phases from '../data/phases.json';
+import { allExpenses, spentBy, stats, usd } from '../lib';
+const s = stats();
+const rows = phases.map((p, i) => ({ label: `P${i}`, name: p.name, planned: p.budget, spent: spentBy(p.id) }));
+---
+<Base title="Budget" description="Planned versus actual spend, by phase.">
+  <p class="eyebrow">金 · Budget</p><h1>Every dollar, in the open.</h1>
+  <div class="grid">
+    <div class="card stat"><div class="n">{usd(s.planned)}</div><div class="l">planned, all phases</div></div>
+    <div class="card stat"><div class="n">{usd(s.spent)}</div><div class="l">spent so far</div></div>
+    <div class="card stat"><div class="n">{usd(s.planned - s.spent)}</div><div class="l">remaining</div></div>
+  </div>
+  <section class="card reveal"><h2>Planned vs spent</h2><Bars rows={rows} /></section>
+  <section class="card reveal table-wrap"><h2>By phase</h2>
+    <table><thead><tr><th>Phase</th><th>What it covers</th><th class="num">Planned</th><th class="num">Spent</th></tr></thead>
+    <tbody>{rows.map((r, i) => <tr><td>{r.label} · {r.name}</td><td class="muted">{phases[i].budgetNote}</td><td class="num">{usd(r.planned)}</td><td class="num">{usd(r.spent)}</td></tr>)}</tbody></table>
+  </section>
+  <section class="card reveal table-wrap"><h2>Expense log</h2>
+    {allExpenses.length === 0 ? <p class="muted">Nothing purchased yet — $0 spent. Purchases appear here as they happen.</p> :
+    <table><thead><tr><th>Date</th><th>Item</th><th>Phase</th><th class="num">Amount</th></tr></thead><tbody>{allExpenses.map((e) => <tr><td>{e.date}</td><td>{e.item}</td><td>{e.phase}</td><td class="num">{usd(e.amount)}</td></tr>)}</tbody></table>}
+  </section>
+</Base>

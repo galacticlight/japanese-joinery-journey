@@ -1,0 +1,8 @@
+[
+ {"type":"Book","title":"Japanese Woodworking Tools: Their Tradition, Spirit, and Use — Toshio Odate","url":"https://www.simonandschuster.com/books/Japanese-Woodworking-Tools/Toshio-Odate/9780941936460","note":"The standard introduction to the tools and how they're used."},
+ {"type":"Book","title":"The Complete Japanese Joinery — Yasuo Nakahara & Hideo Sato","url":"https://archive.org/details/completejapanese0000unse","note":"Reference for the joints in phases 4–6 (borrowable on Internet Archive)."},
+ {"type":"Reading list","title":"Daiku Dojo — books on Japanese woodworking","url":"http://daikudojo.org/Archive/gallery_books/","note":"Curated list from a Japanese carpentry community group."},
+ {"type":"School","title":"Somakosha School (Okayama, Japan)","url":"https://www.somakoshaschool.com/japanese-carpentry-tools-sharpening-joinery","note":"Two-week foundation course: tool setup, sharpening, layout, joinery."},
+ {"type":"Store","title":"Hida Tool (Berkeley, CA)","url":"https://hidatool.com/","note":"US Japanese tool shop; also offers a sharpening service."},
+ {"type":"Store","title":"Kurashige Tools (Japan)","url":"https://shop.kurashige-tools.com/","note":"Ships Japanese tools internationally; prices in JPY."}
+]

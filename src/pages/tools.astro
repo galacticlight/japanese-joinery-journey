@@ -1,0 +1,25 @@
+---
+import Base from '../layouts/Base.astro';
+import tools from '../data/tools.json';
+import { stats, usd } from '../lib';
+const s = stats();
+const owned = tools.filter((t) => t.status === 'owned').reduce((a, t) => a + t.price, 0);
+---
+<Base title="Tools" description="Tool inventory: owned and wanted, with real prices.">
+  <p class="eyebrow">具 · Tools</p><h1>The tool chest.</h1>
+  <p class="lead">Starter kit: <strong>{usd(Math.round(s.starter))}</strong>. Prices are from the linked store on 2026-10-13; JPY converted at ~¥150/$.</p>
+  <div class="filters" role="group" aria-label="Filter tools">{['all', 'starter', 'owned', 'wanted'].map((f) => <button type="button" data-f={f} aria-pressed={f === 'all' ? 'true' : 'false'}>{f}</button>)}</div>
+  <section class="grid">
+    {tools.map((t) => <article class="card reveal tool" data-s={t.status} data-starter={String(t.starter)}>
+      <p class="eyebrow" lang="ja">{t.jp} · <span lang="ja-Latn">{t.romaji}</span></p>
+      <h3 style="margin:.3rem 0">{t.name}</h3><p class="muted" style="font-size:.92rem">{t.use}</p>
+      <p style="display:flex;justify-content:space-between;align-items:center"><strong>{t.price ? usd(t.price) : 'TBD'}</strong><span class={`badge s-${t.status}`}>{t.status}</span></p>
+      {t.url && <a href={t.url} rel="noopener" target="_blank">{t.source} ↗</a>}
+    </article>)}
+  </section>
+  <script>
+    const bs = document.querySelectorAll<HTMLButtonElement>('.filters button');
+    bs.forEach((b) => b.addEventListener('click', () => { bs.forEach((x) => x.setAttribute('aria-pressed', String(x === b))); const f = b.dataset.f;
+      document.querySelectorAll<HTMLElement>('.tool').forEach((c) => c.hidden = !(f === 'all' || (f === 'starter' ? c.dataset.starter === 'true' : c.dataset.s === f))); }));
+  </script>
+</Base>

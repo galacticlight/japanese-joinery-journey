@@ -1,0 +1,19 @@
+---
+// Grouped bar chart: planned vs spent
+const { rows } = Astro.props as { rows: { label: string; planned: number; spent: number }[] };
+const W = 720, H = 280, pad = 40, max = Math.max(1, ...rows.map((r) => Math.max(r.planned, r.spent)));
+const bw = (W - pad * 2) / rows.length;
+const y = (v: number) => H - pad - (v / max) * (H - pad * 2);
+---
+<svg class="chart" viewBox={`0 0 ${W} ${H}`} role="img" aria-label="Planned versus spent budget by phase">
+  {[0, 0.5, 1].map((t) => <g><line x1={pad} x2={W - pad / 2} y1={y(max * t)} y2={y(max * t)} stroke="#d9cdb8" stroke-dasharray="3 4" /><text x={pad - 6} y={y(max * t) + 4} text-anchor="end">${Math.round(max * t)}</text></g>)}
+  {rows.map((r, i) => {
+    const x = pad + i * bw + bw * 0.18, w = bw * 0.3;
+    return <g>
+      <rect x={x} y={y(r.planned)} width={w} height={H - pad - y(r.planned)} rx="3" fill="#c9a26b"><title>{r.label} planned ${r.planned}</title></rect>
+      <rect x={x + w + 3} y={y(r.spent)} width={w} height={Math.max(1, H - pad - y(r.spent))} rx="3" fill="#b5462e"><title>{r.label} spent ${r.spent}</title></rect>
+      <text x={x + w} y={H - pad + 18} text-anchor="middle">{r.label}</text>
+    </g>;
+  })}
+</svg>
+<p class="muted" style="font-size:.85rem"><span style="color:#c9a26b">■</span> planned &nbsp; <span style="color:#b5462e">■</span> spent</p>

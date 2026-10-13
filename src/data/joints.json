@@ -1,0 +1,13 @@
+[
+ {"kanji":"相欠き","romaji":"ai-gaki","english":"Half-lap","meaning":"Both pieces cut to half thickness so they overlap flush.","level":1},
+ {"kanji":"枘差し","romaji":"hozo-sashi","english":"Mortise and tenon","meaning":"A tongue (hozo) inserted into a hole; the backbone of all framing.","level":1},
+ {"kanji":"割楔","romaji":"wari-kusabi","english":"Wedged through tenon","meaning":"Tenon split and wedged from outside to lock without glue.","level":2},
+ {"kanji":"蟻掛け","romaji":"ari-kake","english":"Dovetail housing","meaning":"A dovetail-shaped end dropped into a matching housing.","level":2},
+ {"kanji":"腰掛蟻継ぎ","romaji":"koshikake ari-tsugi","english":"Lapped dovetail splice","meaning":"Lengthens a beam; the lap (koshikake, 'seat') carries load.","level":3},
+ {"kanji":"腰掛鎌継ぎ","romaji":"koshikake kama-tsugi","english":"Lapped gooseneck splice","meaning":"Like ari-tsugi but with a 'sickle' neck that resists pulling apart.","level":3},
+ {"kanji":"追掛大栓継ぎ","romaji":"okkake daisen-tsugi","english":"Scarf joint with pegs","meaning":"Sliding scarf locked with two large pegs; strong in bending.","level":3},
+ {"kanji":"渡り腮","romaji":"watari-ago","english":"Cogged cross joint","meaning":"Beams crossing over each other, locked by a 'jaw'.","level":3},
+ {"kanji":"組子","romaji":"kumiko","english":"Lattice work","meaning":"Thin strips assembled into geometric panels without nails.","level":3},
+ {"kanji":"金輪継ぎ","romaji":"kanawa-tsugi","english":"Rabbeted oblique scarf","meaning":"Two halves locked by a central key (komisen); a prized splice.","level":4},
+ {"kanji":"三方差し","romaji":"sampo-zashi","english":"Three-way corner joint","meaning":"Three members meeting at one corner, each interlocking the others.","level":4}
+]

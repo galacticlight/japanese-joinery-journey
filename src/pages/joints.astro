@@ -1,0 +1,11 @@
+---
+import Base from '../layouts/Base.astro';
+import joints from '../data/joints.json';
+const levels = ['', 'Foundation', 'Intermediate', 'Timber splices', 'Master'];
+---
+<Base title="Joints" description="Glossary of Japanese joints with kanji, romaji and meaning.">
+  <p class="eyebrow">継 · Glossary</p><h1>Joints, in order of difficulty.</h1>
+  <section class="grid">{joints.map((j) => <article class="card joint reveal">
+    <span class="k" lang="ja">{j.kanji}</span><span class="r" lang="ja-Latn">{j.romaji}</span><strong>{j.english}</strong><p class="muted" style="margin:0">{j.meaning}</p><span class="badge s-planned" style="align-self:flex-start">{levels[j.level]}</span>
+  </article>)}</section>
+</Base>
