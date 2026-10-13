@@ -71,6 +71,7 @@
   "summary": "Layout with sashigane and marking knife, then the basic family of joints in softwood until they fit off the saw.",
   "budget": 258,
   "budgetNote": "Practice lumber (estimate ~$80) + Fujihiro mortise chisel ($122.90) + Tajima sumitsubo ($54.98).",
+  "lumberEstimate": 80,
   "milestones": [
    {
     "title": "Half-lap (ai-gaki) — 5 in a row that close with hand pressure",
@@ -106,6 +107,7 @@
   "summary": "Turn practice into things I'll use every day: a stone stand, a Japanese tool box, and a small stool.",
   "budget": 150,
   "budgetNote": "Lumber and hardware (estimate).",
+  "lumberEstimate": 150,
   "milestones": [
    {
     "title": "Sharpening stone stand / pond (togi-dai)",
@@ -136,6 +138,7 @@
   "summary": "The classic timber splices and connections that make Japanese carpentry what it is.",
   "budget": 200,
   "budgetNote": "Timber (estimate ~$100) + two more Taikei chisels (~$100).",
+  "lumberEstimate": 100,
   "milestones": [
    {
     "title": "Koshikake ari-tsugi (lapped dovetail splice)",
@@ -166,6 +169,7 @@
   "summary": "Precision small-stock work: lattice panels built from thin strips with no glue or nails.",
   "budget": 140,
   "budgetNote": "Kumiko jig and stock (estimate).",
+  "lumberEstimate": 140,
   "milestones": [
    {
     "title": "Build a kumiko cutting jig",
@@ -191,6 +195,7 @@
   "summary": "The showpieces: the rabbeted oblique scarf and the three-way corner joint.",
   "budget": 200,
   "budgetNote": "Larger section timber (estimate).",
+  "lumberEstimate": 200,
   "milestones": [
    {
     "title": "Kanawa-tsugi (rabbeted oblique scarf with key)",
